@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,49 +7,34 @@
     <title>Desafío 1 - JavaScript</title>
     <link rel="stylesheet" href="./assets/ccs/style.css">
 </head>
-
 <body>
-
     <section>
         <div class="card">
             <div class="img-card"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
-        
+              <p>Precio base: $<span class="precio-inicial"></span> </p>        
               <p>Cantidad:
                 <button onclick="
-                    var cantidad = document.querySelector(`#cantidad`)
-                    var numeroActual = cantidad.innerHTML
-                    var unidades = Number(numeroActual) - 1
-                    cantidad.innerHTML = unidades"
+                var cantidad = document.querySelector('#cantidad')
+                var numeroActual = cantidad.innerHTML
+                var unidades = Number(numeroActual) - 1
+                if (unidades >= 0) { cantidad.innerHTML = unidades; actualizarTotal(); }"
                 >-</button>
-              
                 <span id="cantidad">0</span>
-
                 <button onclick="
-                    var cantidad = document.querySelector(`#cantidad`)
-                    var numeroActual = cantidad.innerHTML
-                    var unidades = Number(numeroActual) + 1
-                    cantidad.innerHTML = unidades" 
+                var cantidad = document.querySelector('#cantidad')
+                var numeroActual = cantidad.innerHTML
+                var unidades = Number(numeroActual) + 1
+                cantidad.innerHTML = unidades; actualizarTotal();"
                 >+</button>
-
               </p>
             </div>
-
         </div>
     </section>
-
     <div class="total-section">
         <p>Total a pagar: $<span id="valor-total"></span> </p>
     </div>
-
- 
-
-    <script src="./assets/script.js">
-
-        
-      
-
+    <script src="./assets/script.js">  
     </script>
 </body>
 </html>
